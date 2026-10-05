@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GARAKUTA蹴球部</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main class="app">
+<section class="hero">
+  <div class="topbar">
+    <div class="logo"><span>GARAKUTA</span><strong>蹴球部</strong></div>
+    <button class="menu" aria-label="メニュー">☰</button>
+  </div>
+  <div class="hero-character">
+    <img src="./images/garakusaurus.png" alt="ガラクサウルス">
+    <div class="speech">サッカーの<br>分からない用語<br><strong>オレに聞いて！</strong></div>
+  </div>
+  <form id="searchForm" class="search">
+    <div class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="サッカー用語を入力してみてね！"></div>
+    <button type="submit">検索</button>
+  </form>
+  <div class="popular">
+    <span>🔥 人気の用語</span>
+    <button data-term="ハイプレス">ハイプレス</button>
+    <button data-term="ミドルブロック">ミドルブロック</button>
+    <button data-term="ビルドアップ">ビルドアップ</button>
+    <button data-term="偽9番">偽9番</button>
+  </div>
+</section>
+
+<section id="answer" class="answer">
+  <div class="character-box">
+    <img src="./images/garakusaurus.png" alt="">
+    <div class="bubble"><strong id="characterMessage"></strong></div>
+  </div>
+  <article class="explanation">
+    <h1 id="termTitle"></h1>
+    <p id="termLead"></p>
+    <button id="voiceButton" class="voice">🔊 ガラクサウルスの解説を聞く</button>
+  </article>
+</section>
+
+<nav class="levels">
+  <button class="level active easy" data-level="easy">🐣<strong>かんたん</strong><small>初心者向け</small></button>
+  <button class="level normal" data-level="normal">⚽<strong>くわしく</strong><small>もっと知りたい</small></button>
+  <button class="level pro" data-level="pro">🧠<strong>ガチ解説</strong><small>戦術・応用</small></button>
+</nav>
+
+<section class="detail">
+  <div class="detailText">
+    <p id="termDescription"></p>
+    <h3>💡 ポイント</h3>
+    <ul id="pointList"></ul>
+  </div>
+  <div class="diagram" id="fieldDiagram">
+    <div class="goal">相手ゴール</div>
+    <div class="enemy"><i></i><i></i><i></i></div>
+    <div class="arrows"><b>↑</b><b>↑</b><b>↑</b></div>
+    <div class="mini-formation"><img src="./images/mini-garaku-formation.png" alt="ミニガラクサウルスのフォーメーション"></div>
+    <div class="press">前から<br>プレッシャー！</div>
+  </div>
+</section>
+
+<section class="contents">
+  <button id="diagramButton">🦖📋 <strong>図解で見る</strong><span>›</span></button>
+  <button id="videoButton">🦖▶ <strong>60秒でわかる<br>解説動画を見る</strong><span>›</span></button>
+</section>
+<section id="extraPanel" class="extra hidden"></section>
+
+<section class="relatedSection">
+  <h2>📖 関連する用語 <small>一緒に覚えるともっとサッカーが楽しくなるよ！</small></h2>
+  <div id="relatedTerms" class="related"></div>
+</section>
+</main>
+<script src="./js/terms.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
