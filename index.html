@@ -37,51 +37,107 @@
   </div>
 </section>
 
-<section id="answer" class="answer">
-  <div class="character-box">
-    <img src="./images/garakusaurus.png" alt="">
-    <div class="bubble"><strong id="characterMessage"></strong></div>
-  </div>
-  <article class="explanation">
-    <h1 id="termTitle"></h1>
-    <p id="termLead"></p>
-    <button id="voiceButton" class="voice">🔊 ガラクサウルスの解説を聞く</button>
-  </article>
-</section>
+/* =================================
+   GARAKUTA HEADER RESET FINAL
+================================= */
 
-<nav class="levels">
-  <button class="level active easy" data-level="easy">🐣<strong>かんたん</strong><small>初心者向け</small></button>
-  <button class="level normal" data-level="normal">⚽<strong>くわしく</strong><small>もっと知りたい</small></button>
-  <button class="level pro" data-level="pro">🧠<strong>ガチ解説</strong><small>戦術・応用</small></button>
-</nav>
+.hero {
+  position: relative !important;
+  height: 365px !important;
+  min-height: 365px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
 
-<section class="detail">
-  <div class="detailText">
-    <p id="termDescription"></p>
-    <h3>💡 ポイント</h3>
-    <ul id="pointList"></ul>
-  </div>
-  <div class="diagram" id="fieldDiagram">
-    <div class="goal">相手ゴール</div>
-    <div class="enemy"><i></i><i></i><i></i></div>
-    <div class="arrows"><b>↑</b><b>↑</b><b>↑</b></div>
-    <div class="mini-formation"><img src="./images/mini-garaku-formation.png" alt="ミニガラクサウルスのフォーメーション"></div>
-    <div class="press">前から<br>プレッシャー！</div>
-  </div>
-</section>
+/* ロゴ */
+.hero .soccer-logo {
+  position: absolute !important;
+  top: 18px !important;
+  left: 18px !important;
+  width: 105px !important;
+  max-width: 105px !important;
+  margin: 0 !important;
+  transform: none !important;
+  z-index: 30 !important;
+}
 
-<section class="contents">
-  <button id="diagramButton">🦖📋 <strong>図解で見る</strong><span>›</span></button>
-  <button id="videoButton">🦖▶ <strong>60秒でわかる<br>解説動画を見る</strong><span>›</span></button>
-</section>
-<section id="extraPanel" class="extra hidden"></section>
+/* メニューボタン */
+.hero .menu {
+  position: absolute !important;
+  top: 22px !important;
+  right: 18px !important;
+  z-index: 40 !important;
+}
 
-<section class="relatedSection">
-  <h2>📖 関連する用語 <small>一緒に覚えるともっとサッカーが楽しくなるよ！</small></h2>
-  <div id="relatedTerms" class="related"></div>
-</section>
-</main>
-<script src="./js/terms.js"></script>
-<script src="./js/app.js"></script>
-</body>
-</html>
+/* ガラクサウルス */
+.hero .hero-mascot {
+  position: absolute !important;
+  top: 48px !important;
+  left: 50% !important;
+  bottom: auto !important;
+
+  width: 190px !important;
+  max-width: 190px !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+}
+
+/* 吹き出し */
+.hero .speech {
+  position: absolute !important;
+
+  top: 25px !important;
+  right: 12px !important;
+  left: auto !important;
+  bottom: auto !important;
+
+  width: 145px !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 10px 8px !important;
+  transform: none !important;
+
+  background: #fff !important;
+  border: 4px solid #111 !important;
+  border-radius: 50% !important;
+
+  text-align: center !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
+
+  z-index: 50 !important;
+}
+
+.hero .speech strong {
+  color: #f3214f !important;
+  font-size: 17px !important;
+}
+
+/* 検索窓 */
+.hero .search {
+  position: absolute !important;
+  left: 12px !important;
+  right: 12px !important;
+  bottom: 50px !important;
+
+  width: auto !important;
+  margin: 0 !important;
+  z-index: 60 !important;
+}
+
+/* 人気ワード */
+.hero .popular {
+  position: absolute !important;
+  left: 12px !important;
+  right: 12px !important;
+  bottom: 8px !important;
+
+  width: auto !important;
+  margin: 0 !important;
+  z-index: 60 !important;
+}
