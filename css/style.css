@@ -39,3 +39,48 @@ button,input{font:inherit}button{cursor:pointer}img{display:block;max-width:100%
 @media(max-width:340px){.hero-speech{width:122px}.term-character{grid-template-columns:118px minmax(0,1fr)!important}.term-character-image{width:114px!important;height:168px!important}.detail{grid-template-columns:1fr}.diagram{min-height:220px}.related{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:501px){body{padding:0 18px}}
 
+/* ===== TERM ANSWER 微調整 ===== */
+
+.term-character{
+  grid-template-columns:34% 66% !important;
+  min-height:155px !important;
+}
+
+.term-character-left{
+  min-height:155px;
+}
+
+.term-character-image{
+  width:100% !important;
+  max-width:150px !important;
+  margin:0 auto -2px !important;
+}
+
+.explanation{
+  padding:10px 10px 8px !important;
+  justify-content:center;
+}
+
+.explanation h1{
+  margin:0 0 7px !important;
+  font-size:17px !important;
+}
+
+.explanation p{
+  font-size:12px !important;
+  line-height:1.55 !important;
+}
+
+.voice-area{
+  padding:0 !important;
+}
+
+.voice{
+  width:calc(100% - 14px) !important;
+  margin:6px 7px !important;
+  padding:10px 8px !important;
+}
+
+.levels{
+  margin-top:6px !important;
+}
