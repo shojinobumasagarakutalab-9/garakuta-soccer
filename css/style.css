@@ -144,3 +144,25 @@
   color: #f3214f !important;
   font-size: 18px !important;
 }
+
+.hero .popular {
+  position: absolute !important;
+  top: 98px !important;
+  left: 12px !important;
+  right: 12px !important;
+  width: auto !important;
+  margin: 0 !important;
+  z-index: 30 !important;
+}
+
+/* ガラクサウルス */
+.hero .hero-mascot {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 0 !important;
+  top: auto !important;
+  transform: translateX(-50%) !important;
+  width: 190px !important;
+  height: auto !important;
+  z-index: 10 !important;
+}
