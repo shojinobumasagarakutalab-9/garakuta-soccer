@@ -1,39 +1,332 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>GARAKUTA蹴球部</title>
- 
-<link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>GARAKUTA蹴球部</title>
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+
 <main class="app">
-<section class="hero">
 
-<img src="./images/garakutashukyubu-logo.png" class="soccer-logo" alt="GARAKUTA蹴球部">
- 
-  <button class="menu" aria-label="メニュー">☰</button>
-</div>
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="hero">
 
-<img src="./images/garakusaurus-resize2.png" class="hero-mascot" alt="ガラクサウルス">
+    <!-- 蹴球部ロゴ -->
+    <img
+      src="./images/garakutashukyubu-logo.png"
+      class="soccer-logo"
+      alt="GARAKUTA蹴球部"
+    >
 
-  <div class="speech">
-    サッカーの<br>
-    分からない用語<br>
-    <strong>オレに聞いて！</strong>
-  </div>
-</div>
-  <form id="searchForm" class="search">
-    <div class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="サッカー用語を入力してみてね！"></div>
-    <button type="submit">検索</button>
-  </form>
-  <div class="popular">
-    <span>🔥 人気の用語</span>
-    <button data-term="ハイプレス">ハイプレス</button>
-    <button data-term="ミドルブロック">ミドルブロック</button>
-    <button data-term="ビルドアップ">ビルドアップ</button>
-    <button data-term="偽9番">偽9番</button>
-  </div>
-</section>
+    <!-- メニュー -->
+    <button class="menu" aria-label="メニュー">☰</button>
 
+    <!-- メイン ガラクサウルス -->
+    <img
+      src="./images/garakusarurs-resize2.png"
+      class="hero-mascot"
+      alt="ガラクサウルス"
+    >
+
+    <!-- 吹き出し -->
+    <div class="speech">
+      サッカーの<br>
+      分からない用語<br>
+      <strong>オレに聞いて！</strong>
+    </div>
+
+
+    <!-- 検索 -->
+    <form id="searchForm" class="search">
+
+      <div class="searchbox">
+        <span>🔎</span>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="サッカー用語を入力してみてね！"
+          autocomplete="off"
+        >
+      </div>
+
+      <button type="submit">検索</button>
+
+    </form>
+
+
+    <!-- 人気ワード -->
+    <div class="popular">
+
+      <span>🔥 人気の用語</span>
+
+      <button type="button" data-term="ハイプレス">
+        ハイプレス
+      </button>
+
+      <button type="button" data-term="ミドルブロック">
+        ミドルブロック
+      </button>
+
+      <button type="button" data-term="ビルドアップ">
+        ビルドアップ
+      </button>
+
+      <button type="button" data-term="偽9番">
+        偽9番
+      </button>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       ANSWER
+  ========================== -->
+  <section id="answer" class="answer">
+
+    <div class="character-box">
+
+      <img
+        src="./images/garakusarurs.png"
+        alt="ガラクサウルス"
+      >
+
+      <div class="bubble">
+        <strong id="characterMessage">
+          ハイプレスについて説明するよ！
+        </strong>
+      </div>
+
+    </div>
+
+
+    <article class="explanation">
+
+      <h1 id="termTitle">
+        ハイプレスとは？
+      </h1>
+
+      <p id="termLead">
+        相手陣地の高い位置から積極的にプレッシャーをかけて、
+        ボールを奪いにいく守備の戦術だよ！
+      </p>
+
+      <button
+        id="voiceButton"
+        class="voice"
+        type="button"
+      >
+        🎙 ガラクサウルスの解説を聞く
+      </button>
+
+    </article>
+
+  </section>
+
+
+
+  <!-- =========================
+       LEVEL SELECT
+  ========================== -->
+  <nav class="levels">
+
+    <button
+      class="level active easy"
+      data-level="easy"
+      type="button"
+    >
+      🐣
+      <strong>かんたん</strong>
+      <small>初心者向け</small>
+    </button>
+
+
+    <button
+      class="level normal"
+      data-level="normal"
+      type="button"
+    >
+      ⚽
+      <strong>くわしく</strong>
+      <small>もっと知りたい</small>
+    </button>
+
+
+    <button
+      class="level pro"
+      data-level="pro"
+      type="button"
+    >
+      🧠
+      <strong>ガチ解説</strong>
+      <small>戦術・応用</small>
+    </button>
+
+  </nav>
+
+
+
+  <!-- =========================
+       DETAIL
+  ========================== -->
+  <section class="detail">
+
+    <!-- 解説 -->
+    <div class="detailText">
+
+      <p id="termDescription">
+        相手のゴールに近い位置から、
+        みんなでプレッシャーをかけて、
+        相手がパスをつなぐ前に
+        ボールを奪う守り方だよ！
+      </p>
+
+
+      <h3>💡 ポイント</h3>
+
+      <ul id="pointList">
+        <li>高い位置でボールを奪える</li>
+        <li>すぐに攻撃につなげられる</li>
+        <li>全員の連動が大事</li>
+      </ul>
+
+    </div>
+
+
+
+    <!-- =========================
+         FIELD DIAGRAM
+    ========================== -->
+    <div
+      class="diagram"
+      id="fieldDiagram"
+    >
+
+      <div class="goal">
+        相手ゴール
+      </div>
+
+
+      <div class="enemy">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+
+      <div class="arrows">
+        <b>↑</b>
+        <b>↑</b>
+        <b>↑</b>
+      </div>
+
+
+      <div class="mini-formation">
+
+        <img
+          src="./images/mini-garaku-formation.png"
+          alt="ミニガラクサウルスのフォーメーション"
+        >
+
+      </div>
+
+
+      <div class="press">
+        前から<br>
+        プレッシャー！
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTENT BUTTONS
+  ========================== -->
+  <section class="contents">
+
+    <button
+      id="diagramButton"
+      type="button"
+    >
+      🗺️
+      <strong>図解で見る</strong>
+      <span>戦術を図でチェック</span>
+    </button>
+
+
+    <button
+      id="videoButton"
+      type="button"
+    >
+      🎬
+      <strong>60秒でわかる解説動画を見る</strong>
+      <span>ショート動画でチェック</span>
+    </button>
+
+  </section>
+
+
+
+  <!-- =========================
+       EXTRA PANEL
+  ========================== -->
+  <section
+    id="extraPanel"
+    class="extra"
+    hidden
+  >
+  </section>
+
+
+
+  <!-- =========================
+       RELATED TERMS
+  ========================== -->
+  <section
+    id="relatedSection"
+    class="relatedSection"
+  >
+
+    <h2>
+      🔗 関連する用語
+      <small>
+        一緒に覚えるともっとサッカーが楽しくなるよ！
+      </small>
+    </h2>
+
+
+    <div
+      id="relatedTerms"
+      class="related"
+    >
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script src="./js/terms.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>
