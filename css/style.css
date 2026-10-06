@@ -1211,3 +1211,55 @@ button {
 
     font-size: 16px;
   }
+
+/* ========================================
+   用語説明キャラクター
+======================================== */
+
+.term-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  position: relative;
+}
+
+.term-character-image {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  object-fit: contain;
+}
+
+.term-character-message {
+  width: 90%;
+  margin: -5px auto 8px;
+  padding: 8px 10px;
+
+  background: #fff;
+  border: 3px solid #111;
+  border-radius: 18px;
+
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+
+  position: relative;
+  z-index: 5;
+}
+
+.term-character-message strong {
+  display: block;
+  color: #f3214f;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.term-character-message span {
+  display: block;
+  color: #111;
+  font-size: 14px;
+  font-weight: 800;
+}
