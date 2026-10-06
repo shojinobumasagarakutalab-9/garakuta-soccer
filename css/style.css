@@ -1,168 +1,1213 @@
-*{box-sizing:border-box}body{margin:0;background:#071c35;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;color:#101828}button,input{font:inherit}button{cursor:pointer}.app{width:100%;max-width:500px;margin:auto;background:linear-gradient(#dff4ff,#f6fbff);min-height:100vh;overflow:hidden}.hero{padding:18px;background:linear-gradient(rgba(0,70,120,.15),rgba(0,40,75,.52)),radial-gradient(ellipse at 50% 90%,#168b3d 0 28%,transparent 29%),linear-gradient(150deg,#0e79c2,#07355f);color:#fff}.topbar{display:flex;justify-content:space-between}.logo{filter:drop-shadow(2px 3px 0 #061a2d)}.logo span{display:block;font-size:25px;font-weight:1000}.logo strong{display:block;font-size:44px;line-height:.95;color:#ffe238;-webkit-text-stroke:2px white;text-shadow:3px 3px #08233c}.menu{border:0;background:transparent;color:white;font-size:31px}.hero-character{height:175px;position:relative;display:flex;justify-content:center;align-items:flex-end}.hero-character img{height:190px;max-width:60%;object-fit:contain;filter:drop-shadow(0 7px 8px #0005)}.speech{position:absolute;right:0;top:10px;background:#fff;color:#111;border:3px solid #111;border-radius:50%;padding:13px 15px;text-align:center;font-weight:900;line-height:1.25}.speech strong{color:#ef2450;font-size:20px}.search{display:flex;gap:8px}.searchbox{flex:1;display:flex;align-items:center;background:#fff;border-radius:13px;padding:0 12px;box-shadow:0 3px 0 #0003}.searchbox span{font-size:30px;color:#777}.search input{width:100%;min-width:0;border:0;outline:0;padding:15px 6px;font-weight:700}.search>button{border:2px solid #fff;border-radius:11px;background:#f54f91;color:#fff;padding:0 22px;font-size:20px;font-weight:900;box-shadow:0 3px 0 #9d2a5a}.popular{display:flex;gap:7px;overflow-x:auto;margin-top:12px;scrollbar-width:none}.popular::-webkit-scrollbar{display:none}.popular span,.popular button{flex:none;white-space:nowrap;border:0;border-radius:999px;padding:8px 12px;font-weight:900}.popular span{background:#0c3558}.popular button{background:#eaf5ff;color:#122b46}.answer{margin:12px 12px 0;background:#fff;border:3px solid #fff;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:46% 54%;box-shadow:0 2px 0 #77a8bd}.character-box{position:relative;min-height:230px;background:linear-gradient(150deg,#20b25b,#087b39);overflow:hidden}.character-box img{position:absolute;left:-20px;bottom:-10px;width:128%;filter:drop-shadow(0 4px 4px #0003)}.bubble{position:absolute;right:4px;top:12px;background:#fff;border:3px solid #111;border-radius:25px;padding:9px 10px;font-size:14px;font-weight:900;text-align:center;max-width:82%}.bubble strong{color:#111}.explanation{padding:16px 13px}.explanation h1{display:inline-block;margin:0 0 12px;background:#ffdf2a;padding:5px 9px;border-radius:7px;font-size:22px}.explanation p{font-size:15px;font-weight:700;line-height:1.55}.voice{width:100%;border:0;border-radius:999px;background:#168ff0;color:#fff;padding:11px 8px;font-weight:900;box-shadow:inset 0 -3px 0 #0870c2}.levels{display:grid;grid-template-columns:repeat(3,1fr);margin:0 14px}.level{border:1px solid #a9cadf;background:#eaf6ff;padding:9px 3px;font-size:18px}.level:first-child{border-radius:14px 0 0}.level:last-child{border-radius:0 14px 0 0}.level strong,.level small{display:block}.level strong{font-size:16px}.level small{font-size:10px}.level.easy.active{background:#2ab650;color:#fff}.level.normal.active{background:#bce8ff}.level.pro.active{background:#efb9ef}.detail{margin:0 14px;background:#fff;border:1px solid #a9cadf;border-radius:0 0 16px 16px;padding:14px;display:grid;grid-template-columns:42% 58%;gap:10px}.detailText p{font-size:15px;line-height:1.55;font-weight:700;margin:0 0 10px}.detailText h3{display:inline-block;margin:0;background:#ffdd25;border-radius:999px;padding:4px 9px;font-size:14px}.detailText ul{list-style:none;padding:0;margin:9px 0}.detailText li{font-size:13px;font-weight:800;margin:6px 0}.detailText li:before{content:"笨�";display:inline-grid;place-items:center;width:18px;height:18px;margin-right:5px;border-radius:50%;background:#14a94c;color:#fff}.diagram{position:relative;min-height:280px;border-radius:9px;overflow:hidden;background:linear-gradient(90deg,#1da83c 0 50%,#159a34 50%);border:3px solid #e8f9e9}.diagram:before{content:"";position:absolute;inset:8%;border:2px solid #fff}.diagram:after{content:"";position:absolute;left:50%;top:8%;bottom:8%;border-left:2px solid #fff}.goal{position:absolute;z-index:6;top:0;left:50%;transform:translate(-50%,-5%);background:#e72d27;color:#fff;border-radius:999px;padding:3px 8px;font-size:10px;font-weight:900}.enemy{position:absolute;z-index:4;top:15%;left:18%;right:18%;display:flex;justify-content:space-between}.enemy i{width:18px;height:27px;background:#e83027;border:2px solid #8f160f;border-radius:50% 50% 38% 38%}.arrows{position:absolute;z-index:5;top:31%;left:18%;right:18%;display:flex;justify-content:space-between;color:#fff;font-size:43px;text-shadow:2px 2px #e52c26,-2px -2px #e52c26}.mini-formation{position:absolute;z-index:3;left:6%;right:6%;bottom:4%;height:57%;overflow:hidden}.mini-formation img{width:100%;height:100%;object-fit:cover;object-position:center 60%}.press{position:absolute;z-index:7;right:1%;top:43%;background:#e93469;color:#fff;border:3px solid #fff;border-radius:50%;padding:8px 6px;text-align:center;font-size:10px;font-weight:900}.contents{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 14px}.contents button{display:flex;align-items:center;justify-content:space-between;min-height:72px;border:1px solid #eec852;border-radius:13px;background:#ffe66a;padding:8px 11px;font-weight:900}.contents button:nth-child(2){background:#ffd0df;border-color:#f49aba}.contents span{font-size:28px}.extra{margin:10px 14px;background:#fff;border:1px solid #a9cadf;border-radius:14px;padding:14px}.hidden{display:none}.relatedSection{padding:0 14px 18px}.relatedSection h2{font-size:20px;margin:8px 0}.relatedSection h2 small{font-size:10px;font-weight:500}.related{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.related button{min-height:72px;background:#fff;border:2px solid #5ca9e8;border-radius:12px;padding:9px;font-weight:900;text-align:left}.related small{display:block;font-size:10px;font-weight:600;margin-top:4px}@media(max-width:390px){.logo strong{font-size:38px}.hero-character{height:160px}.speech{font-size:13px}.speech strong{font-size:17px}.answer{grid-template-columns:43% 57%}.explanation{padding:12px 9px}.detail{grid-template-columns:1fr}.diagram{max-width:310px;width:100%;margin:auto}}
+/* =========================================================
+   GARAKUTA蹴球部
+   COMPLETE UI
+========================================================= */
 
-/* ===== GARAKUTA蹴球部 ヘッダー調整 ===== */
-
-.topbar {
-  position: relative;
-  min-height: 105px;
-  padding: 14px 18px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+* {
+  box-sizing: border-box;
 }
 
-.soccer-logo {
-  width: 165px;
-  max-width: 43%;
-  height: auto;
-  object-fit: contain;
-  position: relative;
-  z-index: 10;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.hero-character {
-  position: relative;
-  min-height: 300px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: visible;
+body {
+  background: #071c35;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    system-ui,
+    sans-serif;
+  color: #111;
 }
 
-.hero-mascot {
-  width: 235px;
-  max-width: 55%;
-  height: auto;
-  object-fit: contain;
-  position: relative;
-  z-index: 2;
-  margin-left: -60px;
+button,
+input {
+  font: inherit;
 }
 
-.hero-character .speech {
-  position: absolute;
-  right: 15px;
-  top: 35px;
-  width: 185px;
-  padding: 18px 14px;
-  background: #fff;
-  border: 5px solid #111;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 1.25;
-  z-index: 3;
+button {
+  cursor: pointer;
 }
 
-.hero-character .speech strong {
-  color: #f3214f;
-  font-size: 22px;
-}
 
-/* ===== HERO LAYOUT FIX ===== */
+/* =========================================================
+   APP
+========================================================= */
 
-.hero {
-  position: relative;
-  min-height: 360px;
+.app {
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  background: #eaf7ff;
+
   overflow: hidden;
 }
 
-.topbar {
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
   position: relative;
+
+  width: 100%;
+
+  padding:
+    18px
+    16px
+    14px;
+
+  background:
+    radial-gradient(
+      circle at 50% 60%,
+      rgba(22, 180, 106, .30),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #0a72ad 0%,
+      #075b8d 55%,
+      #06466d 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO TOP
+========================================================= */
+
+.hero-top {
+  position: relative;
+
   min-height: 90px;
-  padding: 15px 18px;
+
   display: flex;
+
   align-items: flex-start;
   justify-content: space-between;
+
+  z-index: 20;
+}
+
+
+/* ロゴ */
+
+.soccer-logo {
+  display: block;
+
+  width: 160px;
+  max-width: 43%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* メニュー */
+
+.menu {
+  width: 46px;
+  height: 46px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+  position: relative;
+
+  height: 215px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  margin-top: -55px;
+
   z-index: 10;
 }
 
-/* ===== HEADER FINAL FIX ===== */
 
-.hero {
-  position: relative !important;
-  min-height: 360px !important;
-  overflow: hidden !important;
-}
-
-/* ロゴ：左上 */
-.soccer-logo {
-  position: absolute !important;
-  top: 20px !important;
-  left: 18px !important;
-  width: 110px !important;
-  height: auto !important;
-  margin: 0 !important;
-  z-index: 10 !important;
-}
-
-/* ガラクサウルス：中央 */
-.hero-character {
-  position: relative !important;
-  min-height: 300px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-end !important;
-}
+/* メインキャラ */
 
 .hero-mascot {
-  position: absolute !important;
-  width: 190px !important;
-  max-width: none !important;
-  height: auto !important;
-  left: 50% !important;
-  bottom: 0 !important;
-  transform: translateX(-50%) !important;
-  margin: 0 !important;
+  display: block;
+
+  width: 235px;
+  max-width: 60%;
+
+  height: auto;
+
+  max-height: 235px;
+
+  object-fit: contain;
+
+  object-position: bottom center;
+
+  z-index: 10;
 }
 
-/* 吹き出し：右上 */
-.hero-character .speech {
-  position: absolute !important;
-  top: 20px !important;
-  right: 12px !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
 
-  width: 150px !important;
-  padding: 12px 10px !important;
+/* 吹き出し */
 
-  background: #fff !important;
-  border: 4px solid #111 !important;
-  border-radius: 50% !important;
+.hero-speech {
+  position: absolute;
 
-  text-align: center !important;
-  font-size: 14px !important;
-  font-weight: 900 !important;
-  line-height: 1.15 !important;
-  z-index: 20 !important;
+  top: 22px;
+  right: 0;
+
+  width: 155px;
+
+  padding:
+    12px
+    8px;
+
+  background: #fff;
+
+  border:
+    4px
+    solid
+    #111;
+
+  border-radius: 50%;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  line-height: 1.25;
+
+  z-index: 30;
 }
 
-.hero-character .speech strong {
-  color: #f3214f !important;
-  font-size: 18px !important;
+.hero-speech strong {
+  color: #f32141;
+
+  font-size: 18px;
 }
 
-.hero .popular {
-  position: absolute !important;
-  top: 98px !important;
-  left: 12px !important;
-  right: 12px !important;
-  width: auto !important;
-  margin: 0 !important;
-  z-index: 30 !important;
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  margin-top: 2px;
+
+  z-index: 40;
 }
 
-/* ガラクサウルス */
-.hero .hero-mascot {
-  position: absolute !important;
-  left: 50% !important;
-  bottom: 0 !important;
-  top: auto !important;
-  transform: translateX(-50%) !important;
-  width: 190px !important;
-  height: auto !important;
-  z-index: 10 !important;
+
+.searchbox {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding:
+    0
+    15px;
+
+  background: #fff;
+
+  border:
+    3px
+    solid
+    #111;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 3px 0
+    rgba(0,0,0,.25);
 }
+
+
+.search-icon {
+  flex: 0 0 auto;
+
+  margin-right: 8px;
+
+  color: #777;
+
+  font-size: 31px;
+
+  line-height: 1;
+}
+
+
+.searchbox input {
+  width: 100%;
+
+  min-width: 0;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: #333;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.search-button {
+  flex: 0 0 auto;
+
+  height: 54px;
+
+  padding:
+    0
+    24px;
+
+  border:
+    3px
+    solid
+    #fff;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      #ff5890,
+      #f43877
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 3px 0
+    rgba(0,0,0,.35);
+
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   POPULAR
+========================================================= */
+
+.popular {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  width: 100%;
+
+  margin-top: 11px;
+
+  overflow-x: auto;
+
+  white-space: nowrap;
+
+  scrollbar-width: none;
+}
+
+.popular::-webkit-scrollbar {
+  display: none;
+}
+
+
+.popular-title {
+  flex: 0 0 auto;
+
+  padding:
+    8px
+    10px;
+
+  border-radius: 18px;
+
+  background: #073d61;
+
+  color: #fff;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+.popular button {
+  flex: 0 0 auto;
+
+  padding:
+    8px
+    13px;
+
+  border: 0;
+
+  border-radius: 18px;
+
+  background: #e8f4ff;
+
+  color: #17364f;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255,255,255,.8);
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.answer {
+  padding:
+    10px
+    10px
+    0;
+
+  background:
+    linear-gradient(
+      #ddf3ff,
+      #effaff
+    );
+}
+
+
+/* =========================================================
+   TERM CARD
+========================================================= */
+
+.term-card {
+  display: grid;
+
+  grid-template-columns:
+    46%
+    54%;
+
+  min-height: 190px;
+
+  background: #fff;
+
+  border:
+    3px
+    solid
+    #fff;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 0
+    #7eafca;
+}
+
+
+/* =========================================================
+   CHARACTER
+========================================================= */
+
+.term-character {
+  position: relative;
+
+  min-height: 190px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #16b852,
+      #078d3c
+    );
+}
+
+
+.term-character img {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  transform:
+    translateX(-50%);
+
+  width: 125%;
+
+  max-width: none;
+
+  height: auto;
+}
+
+
+/* キャラ吹き出し */
+
+.term-speech {
+  position: absolute;
+
+  top: 8px;
+  right: 3px;
+
+  min-width: 130px;
+
+  padding:
+    8px
+    8px;
+
+  background: #fff;
+
+  border:
+    3px
+    solid
+    #111;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  line-height: 1.25;
+
+  z-index: 10;
+}
+
+
+.term-speech strong {
+  color: #f12b4f;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   EXPLANATION
+========================================================= */
+
+.explanation {
+  padding:
+    15px
+    12px;
+
+  background: #fff;
+}
+
+
+.explanation h1 {
+  display: inline-block;
+
+  margin:
+    0
+    0
+    12px;
+
+  padding:
+    6px
+    9px;
+
+  background: #ffe23e;
+
+  border-radius: 8px;
+
+  font-size: 20px;
+
+  line-height: 1.15;
+}
+
+
+.explanation p {
+  margin:
+    0
+    0
+    13px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  line-height: 1.6;
+}
+
+
+.voice {
+  display: block;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  padding:
+    10px
+    9px;
+
+  border: 0;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      #25aaff,
+      #078be2
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 3px 0
+    #0566a7;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   LEVELS
+========================================================= */
+
+.levels {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  margin-top: 5px;
+
+  border:
+    1px
+    solid
+    #9cc8e2;
+
+  border-radius:
+    17px
+    17px
+    0
+    0;
+
+  overflow: hidden;
+
+  background: #eaf7ff;
+}
+
+
+.level {
+  min-height: 65px;
+
+  padding:
+    8px
+    3px;
+
+  border: 0;
+
+  border-right:
+    1px
+    solid
+    #a9d0e5;
+
+  background: #dff3ff;
+
+  color: #111;
+
+  text-align: center;
+}
+
+
+.level:last-child {
+  border-right: 0;
+}
+
+
+.level strong {
+  display: block;
+
+  font-size: 14px;
+}
+
+
+.level small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.level.active {
+  background:
+    linear-gradient(
+      #21ca5b,
+      #0cab47
+    );
+
+  color: #fff;
+}
+
+
+.level.pro {
+  background-color: #f5d8fa;
+}
+
+
+/* =========================================================
+   DETAIL
+========================================================= */
+
+.detail {
+  display: grid;
+
+  grid-template-columns:
+    43%
+    57%;
+
+  gap: 8px;
+
+  padding:
+    12px
+    9px;
+
+  background: #fff;
+
+  border-left:
+    1px
+    solid
+    #9cc8e2;
+
+  border-right:
+    1px
+    solid
+    #9cc8e2;
+
+  border-bottom:
+    1px
+    solid
+    #9cc8e2;
+
+  border-radius:
+    0
+    0
+    17px
+    17px;
+}
+
+
+.detail-text {
+  min-width: 0;
+}
+
+
+#termDescription {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  line-height: 1.55;
+}
+
+
+.detail h3 {
+  display: inline-block;
+
+  margin:
+    9px
+    0
+    6px;
+
+  padding:
+    4px
+    10px;
+
+  background: #ffe133;
+
+  border-radius: 15px;
+
+  font-size: 12px;
+}
+
+
+#pointList {
+  margin: 0;
+
+  padding-left: 18px;
+}
+
+
+#pointList li {
+  margin:
+    4px
+    0;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.diagram {
+  position: relative;
+
+  min-height: 230px;
+
+  overflow: hidden;
+
+  border:
+    3px
+    solid
+    #fff;
+
+  border-radius: 8px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #0c9d3e 0,
+      #0c9d3e 35px,
+      #12a947 35px,
+      #12a947 70px
+    );
+
+  box-shadow:
+    inset
+    0 0 0 2px
+    rgba(255,255,255,.55);
+}
+
+
+.goal {
+  width: 90px;
+
+  margin:
+    3px
+    auto;
+
+  padding:
+    3px;
+
+  border-radius: 8px;
+
+  background: #e51f31;
+
+  color: #fff;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+
+.enemy {
+  display: flex;
+
+  justify-content: space-around;
+
+  padding:
+    0
+    22px;
+
+  margin-top: 14px;
+}
+
+
+.enemy i {
+  display: block;
+
+  width: 15px;
+  height: 22px;
+
+  border:
+    1px
+    solid
+    #8d0d18;
+
+  border-radius: 50%;
+
+  background: #ed2939;
+}
+
+
+.arrows {
+  display: flex;
+
+  justify-content: space-around;
+
+  padding:
+    0
+    26px;
+
+  margin:
+    3px
+    0
+    -8px;
+
+  color: #fff;
+
+  font-size: 33px;
+
+  text-shadow:
+    0 2px 2px
+    rgba(0,0,0,.35);
+
+  z-index: 5;
+}
+
+
+.mini-formation {
+  display: block;
+
+  width: 100%;
+
+  max-height: 125px;
+
+  object-fit: contain;
+
+  margin: 0 auto;
+}
+
+
+.press {
+  position: absolute;
+
+  right: 5px;
+  bottom: 64px;
+
+  padding:
+    7px
+    9px;
+
+  border:
+    3px
+    solid
+    #fff;
+
+  border-radius: 50%;
+
+  background: #e93267;
+
+  color: #fff;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   CONTENT LINKS
+========================================================= */
+
+.content-links {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+
+.content-card {
+  min-height: 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    8px
+    10px;
+
+  border:
+    3px
+    solid
+    #fff;
+
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+
+.diagram-button {
+  background:
+    linear-gradient(
+      135deg,
+      #fff59a,
+      #ffd93f
+    );
+}
+
+
+.video-button {
+  background:
+    linear-gradient(
+      135deg,
+      #ffd9e5,
+      #ffacc8
+    );
+}
+
+
+.content-icon {
+  font-size: 25px;
+}
+
+
+.content-card strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+
+.content-card small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 8px;
+}
+
+
+.content-card > b {
+  font-size: 28px;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   RELATED
+========================================================= */
+
+.related-section {
+  padding:
+    14px
+    10px
+    22px;
+
+  background:
+    linear-gradient(
+      #eaf7ff,
+      #d8f0ff
+    );
+}
+
+
+.related-heading {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+}
+
+
+.related-heading strong {
+  font-size: 17px;
+}
+
+
+.related-heading span {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  color: #444;
+}
+
+
+.related {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap: 7px;
+}
+
+
+.related button {
+  min-width: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border:
+    2px
+    solid
+    #48aaf0;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  text-align: center;
+}
+
+
+.related-image {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 62px;
+
+  background:
+    linear-gradient(
+      #0ca947,
+      #087f36
+    );
+
+  font-size: 27px;
+}
+
+
+.related button strong {
+  display: block;
+
+  padding:
+    7px
+    3px
+    1px;
+
+  font-size: 10px;
+}
+
+
+.related button small {
+  display: block;
+
+  padding:
+    0
+    3px
+    7px;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   SMALL SMARTPHONE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .soccer-logo {
+    width: 145px;
+  }
+
+  .hero-visual {
+    height: 205px;
+  }
+
+  .hero-mascot {
+    width: 210px;
+  }
+
+  .hero-speech {
+    width: 140px;
+
+    font-size: 12px;
+  }
+
+  .hero-speech strong {
+    font-size: 16px;
+  }
+
+  .searchbox {
+    height: 50px;
+  }
+
+  .search-button {
+    height: 50px;
+
+    padding:
+      0
+      17px;
+
+    font-size: 16px;
+  }
