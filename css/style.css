@@ -1263,3 +1263,93 @@ button {
   font-size: 14px;
   font-weight: 800;
 }
+
+/* ========================================
+   説明カード：吹き出し
+======================================== */
+
+.term-character-message {
+  position: absolute !important;
+
+  top: 22px !important;
+  right: 12px !important;
+  left: auto !important;
+  bottom: auto !important;
+
+  width: 145px !important;
+
+  padding: 12px 10px !important;
+
+  background: #fff !important;
+
+  border: 3px solid #111 !important;
+  border-radius: 28px !important;
+
+  text-align: center !important;
+
+  line-height: 1.25 !important;
+
+  z-index: 5 !important;
+}
+
+/* 吹き出しのしっぽ */
+
+.term-character-message::before {
+  content: "" !important;
+
+  position: absolute !important;
+
+  left: -15px !important;
+  bottom: 20px !important;
+
+  width: 0 !important;
+  height: 0 !important;
+
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  border-right: 16px solid #111 !important;
+}
+
+.term-character-message::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  left: -10px !important;
+  bottom: 22px !important;
+
+  width: 0 !important;
+  height: 0 !important;
+
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-right: 13px solid #fff !important;
+}
+
+
+/* 用語名 */
+
+.term-character-message strong {
+  display: block !important;
+
+  color: #f3214f !important;
+
+  font-size: 20px !important;
+  font-weight: 900 !important;
+
+  line-height: 1.1 !important;
+}
+
+
+/* 「について説明するよ！」 */
+
+.term-character-message span {
+  display: block !important;
+
+  color: #111 !important;
+
+  font-size: 13px !important;
+  font-weight: 800 !important;
+
+  margin-top: 3px !important;
+}
