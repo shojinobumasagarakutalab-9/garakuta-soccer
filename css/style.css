@@ -192,1054 +192,332 @@ button{
   color:var(--pink);
 }
 
-.hero-speech::before{
-  content:"";
-
-  position:absolute;
-  left:32px;
-  top:-13px;
-
-  width:0;
-  height:0;
-
-  border-left:9px solid transparent;
-  border-right:9px solid transparent;
-  border-bottom:13px solid #fff;
-}
-
-.hero-speech::after{
-  content:"";
-
-  position:absolute;
-  left:35px;
-  top:-8px;
-
-  width:0;
-  height:0;
-
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-bottom:9px solid var(--yellow);
-}
-
-
 /* =========================================================
-   SEARCH
-   ========================================================= */
+   GARAKUTA蹴球部
+   PC / TABLET レイアウト調整パッチ
+   ※既存CSSは消さず、このまま一番下へ追加
+========================================================= */
 
-.search{
-  position:relative;
-  z-index:5;
 
-  width:100%;
+/* ---------- PC基本サイズ ---------- */
 
-  display:flex;
-  align-items:center;
-
-  gap:8px;
-
-  margin-top:4px;
-}
-
-.search-box{
-  flex:1;
-  min-width:0;
-
-  height:48px;
-
-  display:flex;
-  align-items:center;
-
-  padding:0 13px;
-
-  background:#fff;
-
-  border:3px solid #fff;
-  border-radius:14px;
-
-  box-shadow:0 5px 0 rgba(0,0,0,.16);
-}
-
-.search-icon{
-  flex:none;
-  margin-right:7px;
-
-  color:#586776;
-
-  font-size:16px;
-}
-
-.search-box input{
-  display:block;
-
-  flex:1;
-  min-width:0;
-  width:100%;
-
-  border:0;
-  outline:0;
-
-  background:transparent;
-
-  color:#1c2731;
-
-  font-size:14px;
-  font-weight:700;
-}
-
-.search-box input::placeholder{
-  color:#8b959f;
-  opacity:1;
-}
-
-.search-button{
-  flex:0 0 78px;
-
-  height:48px;
-
-  border:3px solid #fff;
-  border-radius:14px;
-
-  background:var(--pink);
-  color:#fff;
-
-  font-size:14px;
-  font-weight:900;
-
-  box-shadow:0 5px 0 rgba(0,0,0,.16);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.search-button:active{
-  transform:translateY(2px);
-  box-shadow:0 3px 0 rgba(0,0,0,.16);
-}
-
-
-/* =========================================================
-   POPULAR WORDS
-   ========================================================= */
-
-.popular{
-  position:relative;
-  z-index:4;
-
-  width:100%;
-
-  margin-top:15px;
-
-  display:flex;
-  align-items:center;
-
-  gap:7px;
-
-  overflow-x:auto;
-
-  padding:0 0 5px;
-
-  white-space:nowrap;
-
-  scrollbar-width:none;
-}
-
-.popular::-webkit-scrollbar{
-  display:none;
-}
-
-.popular-title{
-  flex:none;
-
-  margin-right:2px;
-
-  color:#fff;
-
-  font-size:11px;
-  font-weight:900;
-}
-
-.popular button{
-  flex:none;
-
-  min-height:30px;
-
-  padding:6px 12px;
-
-  border:1px solid rgba(255,255,255,.7);
-  border-radius:999px;
-
-  background:rgba(255,255,255,.14);
-  color:#fff;
-
-  font-size:11px;
-  font-weight:800;
-
-  transition:.18s;
-}
-
-.popular button:hover{
-  background:#fff;
-  color:var(--navy);
-}
-
-
-/* =========================================================
-   TERM ANSWER
-   ========================================================= */
-
-.answer{
-  padding:15px 14px 10px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #f2f8fb 0%,
-      #ffffff 100%
-    );
-}
-
-.term-character{
-  display:grid !important;
-
-  grid-template-columns:34% 66% !important;
-
-  min-height:160px !important;
-
-  overflow:visible !important;
-
-  border:2px solid var(--line);
-  border-radius:20px;
-
-  background:#fff;
-
-  box-shadow:0 7px 18px rgba(7,28,53,.08);
-}
-
-.term-character-left{
-  position:relative;
-
-  min-height:160px !important;
-
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-
-  padding:8px 2px 0;
-
-  border-radius:18px 0 0 18px;
-
-  background:
-    radial-gradient(
-      circle at 50% 75%,
-      rgba(17,198,109,.18),
-      transparent 48%
-    ),
-    linear-gradient(
-      180deg,
-      #effff6 0%,
-      #dff7eb 100%
-    );
-}
-
-.term-character-image{
-  display:block;
-
-  width:100% !important;
-  max-width:150px !important;
-  height:auto !important;
-
-  margin:0 auto -2px !important;
-
-  object-fit:contain !important;
-
-  filter:drop-shadow(0 6px 4px rgba(0,0,0,.14));
-}
-
-
-/* =========================================================
-   ANSWER SPEECH CARD
-   ========================================================= */
-
-.term-character-message{
-  position:relative !important;
-
-  left:auto !important;
-  right:auto !important;
-  top:auto !important;
-  bottom:auto !important;
-
-  width:auto !important;
-
-  align-self:stretch;
-
-  padding:15px 14px 12px !important;
-
-  border:0 !important;
-  border-radius:0 18px 18px 0 !important;
-
-  background:#fff !important;
-
-  color:var(--text);
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.term-character-message::before,
-.term-character-message::after{
-  display:none !important;
-}
-
-.term-character-message strong{
-  display:block;
-
-  margin-bottom:5px;
-
-  color:var(--navy);
-
-  font-size:20px !important;
-  line-height:1.25;
-
-  font-weight:900;
-}
-
-.term-character-message span{
-  font-size:13px;
-  line-height:1.7;
-  font-weight:600;
-
-  color:#354554;
-}
-
-
-/* =========================================================
-   EXPLANATION
-   ========================================================= */
-
-.explanation{
-  margin-top:10px;
-
-  padding:14px 14px 13px !important;
-
-  border:2px solid var(--line);
-  border-radius:17px !important;
-
-  background:#fff !important;
-
-  box-shadow:0 5px 14px rgba(7,28,53,.05);
-}
-
-.explanation h1{
-  margin:0 0 8px !important;
-
-  color:var(--navy);
-
-  font-size:19px !important;
-  line-height:1.35;
-
-  font-weight:900;
-}
-
-.explanation p{
-  margin:0;
-
-  color:#334453;
-
-  font-size:13px !important;
-  line-height:1.75 !important;
-  font-weight:600;
-}
-
-
-/* =========================================================
-   VOICE BUTTON
-   ========================================================= */
-
-.voice-area{
-  padding:0 14px 12px;
-  background:#fff;
-}
-
-.voice{
-  width:100% !important;
-
-  min-height:44px;
-
-  margin:0 !important;
-  padding:10px 14px !important;
-
-  border:0;
-  border-radius:999px !important;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--green-dark),
-      var(--green)
-    ) !important;
-
-  color:#fff;
-
-  font-size:13px !important;
-  font-weight:900;
-
-  box-shadow:0 5px 12px rgba(17,198,109,.23);
-}
-
-
-/* =========================================================
-   LEVEL SELECT
-   ========================================================= */
-
-.levels{
-  display:grid !important;
-  grid-template-columns:repeat(3,1fr) !important;
-
-  gap:7px;
-
-  margin:0 !important;
-  padding:11px 14px 14px;
-
-  background:#fff;
-}
-
-.level{
-  min-height:62px !important;
-
-  padding:8px 4px !important;
-
-  border:2px solid #d7e3eb !important;
-  border-radius:14px !important;
-
-  background:#fff !important;
-
-  overflow:hidden;
-
-  color:var(--navy);
-
-  text-align:center;
-
-  transition:.18s;
-}
-
-.level strong{
-  display:block;
-
-  margin-bottom:2px;
-
-  font-size:13px;
-  line-height:1.25;
-  font-weight:900;
-}
-
-.level small{
-  display:block;
-
-  font-size:9px;
-  line-height:1.3;
-
-  color:#6e7d89;
-}
-
-.level.easy strong::before{
-  content:"● ";
-  color:var(--green);
-}
-
-.level.normal strong::before{
-  content:"● ";
-  color:var(--blue);
-}
-
-.level.pro strong::before{
-  content:"● ";
-  color:var(--red);
-}
-
-.level.active.easy{
-  border-color:var(--green) !important;
-  background:#e9fff4 !important;
-}
-
-.level.active.normal{
-  border-color:var(--blue) !important;
-  background:#edf5ff !important;
-}
-
-.level.active.pro{
-  border-color:var(--red) !important;
-  background:#fff0f0 !important;
-}
-
-
-/* =========================================================
-   DETAIL
-   ========================================================= */
-
-.detail{
-  display:grid !important;
-
-  grid-template-columns:minmax(0,1fr) !important;
-
-  gap:11px !important;
-
-  margin:0;
-  padding:14px !important;
-
-  background:#f4f8fa;
-}
-
-.detail-text{
-  min-width:0;
-
-  padding:15px !important;
-
-  border:2px solid var(--line);
-  border-radius:17px;
-
-  background:#fff;
-}
-
-.detail-text p{
-  margin:0 0 12px;
-
-  color:#334453;
-
-  font-size:13px;
-  line-height:1.75;
-
-  font-weight:600;
-}
-
-.detail-text h3{
-  display:inline-block;
-
-  margin:0 0 9px;
-
-  padding:5px 10px;
-
-  border-radius:999px;
-
-  background:var(--yellow);
-  color:var(--navy);
-
-  font-size:12px;
-  font-weight:900;
-}
-
-#pointList{
-  margin:0;
-  padding-left:20px;
-}
-
-#pointList li{
-  margin:7px 0;
-
-  color:#263847;
-
-  font-size:12px;
-  line-height:1.55;
-
-  font-weight:700;
-}
-
-
-/* =========================================================
-   TACTICAL DIAGRAM
-   ========================================================= */
-
-.diagram{
-  position:relative;
-
-  min-height:250px !important;
-
-  overflow:hidden;
-
-  border:3px solid #fff;
-  border-radius:20px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.07) 50%,
-      transparent 50%
-    ),
-    #168a4f;
-
-  box-shadow:0 7px 18px rgba(7,28,53,.15);
-}
-
-.diagram::before{
-  content:"";
-
-  position:absolute;
-  inset:10px;
-
-  border:2px solid rgba(255,255,255,.8);
-  border-radius:3px;
-
-  pointer-events:none;
-}
-
-.diagram::after{
-  content:"";
-
-  position:absolute;
-
-  left:50%;
-  top:10px;
-  bottom:10px;
-
-  width:2px;
-
-  transform:translateX(-50%);
-
-  background:rgba(255,255,255,.72);
-
-  pointer-events:none;
-}
-
-.goal{
-  position:absolute;
-
-  top:8px;
-  left:50%;
-
-  transform:translateX(-50%);
-
-  z-index:3;
-
-  min-width:80px;
-
-  padding:5px 8px;
-
-  border-radius:999px;
-
-  background:#fff;
-
-  color:var(--navy);
-
-  text-align:center;
-  font-size:10px;
-  font-weight:900;
-}
-
-.enemy{
-  position:absolute;
-
-  top:52px;
-  left:50%;
-
-  transform:translateX(-50%);
-
-  z-index:3;
-
-  display:flex;
-
-  gap:14px;
-}
-
-.enemy i{
-  display:block;
-
-  width:14px;
-  height:14px;
-
-  border:3px solid #fff;
-  border-radius:50%;
-
-  background:var(--red);
-
-  box-shadow:0 2px 4px rgba(0,0,0,.25);
-}
-
-.arrows{
-  position:absolute;
-
-  top:88px;
-  left:13%;
-  right:13%;
-
-  z-index:3;
-
-  display:flex;
-
-  justify-content:space-between;
-}
-
-.arrows b{
-  color:#fff;
-
-  font-size:35px;
-  line-height:1;
-
-  text-shadow:0 2px 3px rgba(0,0,0,.4);
-}
-
-.mini-formation{
-  position:absolute !important;
-
-  left:50% !important;
-  right:auto !important;
-  bottom:34px !important;
-
-  transform:translateX(-50%) !important;
-
-  z-index:3 !important;
-
-  display:block !important;
-
-  width:190px !important;
-  max-width:62% !important;
-  height:auto !important;
-
-  object-fit:contain !important;
-
-  filter:drop-shadow(0 5px 4px rgba(0,0,0,.25));
-}
-
-.press{
-  position:absolute !important;
-
-  left:50% !important;
-  bottom:8px !important;
-
-  transform:translateX(-50%) !important;
-
-  z-index:4 !important;
-
-  width:auto !important;
-
-  padding:5px 12px !important;
-
-  border-radius:999px;
-
-  background:var(--yellow);
-
-  color:var(--navy);
-
-  text-align:center;
-
-  font-size:11px !important;
-  line-height:1.2;
-
-  font-weight:900;
-}
-
-
-/* =========================================================
-   CONTENT BUTTONS
-   ========================================================= */
-
-.content-links{
-  display:grid !important;
-
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-
-  gap:9px !important;
-
-  padding:14px !important;
-
-  background:#fff !important;
-}
-
-.content-card{
-  position:relative;
-
-  min-height:88px !important;
-
-  overflow:hidden;
-
-  padding:12px !important;
-
-  border:0 !important;
-  border-radius:17px !important;
-
-  text-align:left;
-
-  display:grid !important;
-
-  grid-template-columns:38px minmax(0,1fr) 18px !important;
-
-  align-items:center;
-
-  gap:8px !important;
-
-  box-shadow:0 5px 14px rgba(7,28,53,.08);
-}
-
-.diagram-button{
-  background:
-    linear-gradient(
-      135deg,
-      #e8fff3,
-      #f6fffa
-    ) !important;
-}
-
-.video-button{
-  background:
-    linear-gradient(
-      135deg,
-      #fff1f5,
-      #fff8fa
-    ) !important;
-}
-
-.content-icon{
-  font-size:25px;
-}
-
-.content-card strong{
-  display:block;
-
-  color:var(--navy);
-
-  font-size:13px;
-  line-height:1.35;
-
-  font-weight:900;
-}
-
-.content-card small{
-  display:block;
-
-  margin-top:3px;
-
-  color:#6e7c88;
-
-  font-size:9px;
-  line-height:1.4;
-
-  font-weight:700;
-}
-
-.content-card > b{
-  font-size:22px;
-  color:#84929e;
-}
-
-
-/* =========================================================
-   RELATED
-   ========================================================= */
-
-.related-section{
-  padding:15px 14px 24px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #071c35 0%,
-      #0d2944 100%
-    );
-
-  color:#fff;
-}
-
-.related-heading{
-  display:flex;
-
-  align-items:flex-end;
-  justify-content:space-between;
-
-  gap:10px;
-
-  margin-bottom:12px;
-}
-
-.related-heading strong{
-  display:block;
-
-  color:#fff;
-
-  font-size:15px;
-  font-weight:900;
-}
-
-.related-heading span{
-  max-width:58%;
-
-  color:#c8d6e0;
-
-  font-size:9px;
-  line-height:1.45;
-
-  text-align:right;
-}
-
-.related{
-  display:grid !important;
-
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-
-  gap:9px !important;
-}
-
-.related button{
-  min-width:0 !important;
-  min-height:76px !important;
-
-  padding:10px !important;
-
-  border:1px solid rgba(255,255,255,.18) !important;
-  border-radius:14px !important;
-
-  background:rgba(255,255,255,.10) !important;
-
-  color:#fff;
-
-  text-align:left;
-
-  display:grid;
-
-  grid-template-columns:34px minmax(0,1fr);
-
-  gap:8px;
-
-  align-items:center;
-}
-
-.related-image{
-  font-size:23px !important;
-}
-
-.related strong{
-  display:block;
-
-  color:#fff;
-
-  font-size:12px !important;
-  line-height:1.3;
-
-  font-weight:900;
-}
-
-.related small{
-  display:block;
-
-  margin-top:2px;
-
-  color:#b9cad6;
-
-  font-size:9px !important;
-  line-height:1.35;
-
-  font-weight:600;
-}
-
-
-/* =========================================================
-   TAP / HOVER
-   ========================================================= */
-
-.popular button,
-.level,
-.voice,
-.content-card,
-.related button,
-.search-button{
-  -webkit-tap-highlight-color:transparent;
-}
-
-@media (hover:hover){
-
-  .level:hover{
-    transform:translateY(-2px);
-  }
-
-  .content-card:hover{
-    transform:translateY(-2px);
-  }
-
-  .related button:hover{
-    background:rgba(255,255,255,.17) !important;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width:390px){
-
-  .hero{
-    padding-left:12px;
-    padding-right:12px;
-  }
-
-  .soccer-logo{
-    width:132px;
-  }
-
-  .hero-mascot{
-    width:165px;
-  }
-
-  .hero-speech{
-    font-size:12px;
-  }
-
-  .search-button{
-    flex-basis:70px;
-  }
-
-  .answer{
-    padding-left:10px;
-    padding-right:10px;
-  }
-
-  .term-character{
-    grid-template-columns:36% 64% !important;
-  }
-
-  .term-character-image{
-    max-width:128px !important;
-  }
-
-  .term-character-message{
-    padding:12px 10px !important;
-  }
-
-  .term-character-message strong{
-    font-size:18px !important;
-  }
-
-  .levels{
-    padding-left:10px;
-    padding-right:10px;
-  }
-
-  .detail{
-    padding:10px !important;
-  }
-
-  .content-links{
-    padding:10px !important;
-  }
-
-  .related-section{
-    padding-left:10px;
-    padding-right:10px;
-  }
-}
-
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-
-@media (min-width:521px){
+@media (min-width: 700px){
 
   body{
-    padding:20px 0;
+    background:#eef5f8 !important;
   }
 
   .app{
-    border-radius:24px;
+    width:100% !important;
+    max-width:920px !important;
+    margin:30px auto !important;
+    border-radius:28px !important;
+    overflow:hidden !important;
+    box-shadow:0 12px 35px rgba(0,0,0,.12) !important;
   }
+
+
+  /* =================================
+     上部 HERO
+  ================================= */
+
+  .hero{
+    min-height:440px !important;
+    padding:26px 42px 24px !important;
+  }
+
+  .hero-top{
+    min-height:80px !important;
+  }
+
+  .soccer-logo{
+    width:150px !important;
+    max-width:150px !important;
+  }
+
+  .hero-mascot{
+    width:220px !important;
+    max-width:220px !important;
+    margin:5px auto 8px !important;
+  }
+
+  .hero-speech{
+    width:190px !important;
+    min-height:80px !important;
+    padding:12px 15px !important;
+    font-size:16px !important;
+    line-height:1.45 !important;
+  }
+
+
+  /* =================================
+     検索
+  ================================= */
+
+  .search{
+    width:100% !important;
+    max-width:680px !important;
+    margin:14px auto 8px !important;
+    padding:0 !important;
+    gap:10px !important;
+  }
+
+  .search-box{
+    height:52px !important;
+    border-radius:15px !important;
+    padding:0 15px !important;
+  }
+
+  .search-icon{
+    font-size:18px !important;
+  }
+
+  .search-box input{
+    font-size:16px !important;
+  }
+
+  .search-button{
+    width:90px !important;
+    height:52px !important;
+    flex:0 0 90px !important;
+    font-size:15px !important;
+    border-radius:15px !important;
+  }
+
+
+  /* =================================
+     人気ワード
+  ================================= */
+
+  .popular{
+    width:100% !important;
+    max-width:680px !important;
+    margin:0 auto !important;
+    padding:8px 0 !important;
+    gap:7px !important;
+    justify-content:center !important;
+  }
+
+  .popular-title{
+    font-size:12px !important;
+  }
+
+  .popular button{
+    min-height:31px !important;
+    padding:5px 12px !important;
+    font-size:12px !important;
+  }
+
+
+  /* =================================
+     メイン回答
+  ================================= */
+
+  .answer{
+    padding:24px 30px 10px !important;
+  }
+
+  .term-character{
+    display:grid !important;
+    grid-template-columns:220px minmax(0,1fr) !important;
+    gap:24px !important;
+    min-height:210px !important;
+    align-items:center !important;
+  }
+
+  .term-character-left{
+    min-height:200px !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+  }
+
+  .term-character-image{
+    width:190px !important;
+    max-width:190px !important;
+    margin:0 auto !important;
+  }
+
+  .term-character-message{
+    position:relative !important;
+    width:100% !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    align-self:center !important;
+    padding:22px 24px !important;
+    border-radius:20px !important;
+  }
+
+  .term-character-message strong{
+    font-size:22px !important;
+    line-height:1.35 !important;
+  }
+
+  .explanation{
+    padding:0 !important;
+  }
+
+  .explanation h1{
+    font-size:22px !important;
+    margin:0 0 10px !important;
+  }
+
+  .explanation p{
+    font-size:15px !important;
+    line-height:1.75 !important;
+  }
+
+
+  /* =================================
+     音声ボタン
+  ================================= */
+
+  .voice-area{
+    padding:12px 30px 8px !important;
+  }
+
+  .voice{
+    width:100% !important;
+    height:48px !important;
+    font-size:14px !important;
+    border-radius:999px !important;
+  }
+
+
+  /* =================================
+     難易度
+  ================================= */
+
+  .levels{
+    margin:10px 30px 20px !important;
+    gap:12px !important;
+  }
+
+  .level{
+    min-height:68px !important;
+    padding:10px 12px !important;
+  }
+
+  .level strong{
+    font-size:14px !important;
+  }
+
+  .level small{
+    font-size:10px !important;
+  }
+
+
+  /* =================================
+     詳細説明 ＋ 図解
+  ================================= */
+
+  .detail{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:20px !important;
+    padding:0 30px 24px !important;
+    align-items:stretch !important;
+  }
+
+  .detail-text{
+    min-height:300px !important;
+    padding:24px !important;
+    font-size:15px !important;
+    line-height:1.7 !important;
+  }
+
+  .detail-text h3{
+    font-size:17px !important;
+  }
+
+  .diagram{
+    min-height:300px !important;
+    margin:0 !important;
+    padding:15px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .mini-formation{
+    width:100% !important;
+    max-width:390px !important;
+    max-height:270px !important;
+    object-fit:contain !important;
+  }
+
+
+  /* =================================
+     図解 / 動画ボタン
+  ================================= */
+
+  .content-links{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:14px !important;
+    padding:0 30px 28px !important;
+  }
+
+  .content-card{
+    min-height:82px !important;
+    padding:15px 18px !important;
+  }
+
+  .content-card strong{
+    font-size:15px !important;
+  }
+
+  .content-card small{
+    font-size:11px !important;
+  }
+
+
+  /* =================================
+     関連用語
+  ================================= */
+
+  .related-section{
+    padding:22px 30px 30px !important;
+  }
+
+  .related-heading strong{
+    font-size:17px !important;
+  }
+
+  .related{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:12px !important;
+    margin-top:15px !important;
+  }
+
+  .related button{
+    min-height:100px !important;
+    padding:14px !important;
+  }
+
+  .related strong{
+    font-size:14px !important;
+  }
+
+  .related small{
+    font-size:11px !important;
+  }
+
+}
+
+
+/* =========================================================
+   スマホ
+   今できているレイアウトを維持
+========================================================= */
+
+@media (max-width:699px){
+
+  .app{
+    width:100% !important;
+    max-width:520px !important;
+    margin:0 auto !important;
+  }
+
 }
